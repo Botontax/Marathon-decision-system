@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#111827" />
+  <title>Marathon Weekly Decision System</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <p class="kicker">Marathon Weekly Decision System</p>
+      <h1>初馬訓練決策系統</h1>
+      <p class="subtitle">不綁星期幾。每週完成該有的訓練刺激，依照身體狀態自己選。</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="panel week-panel">
+      <div>
+        <p class="label">Current Block</p>
+        <h2 id="weekTitle">Week 1</h2>
+        <p id="weekRange" class="muted"></p>
+        <p id="weekGoal" class="goal"></p>
+      </div>
+      <div class="week-buttons">
+        <button id="prevBtn">← 上一週</button>
+        <button id="nextBtn">下一週 →</button>
+      </div>
+    </section>
+
+    <section class="panel rule-panel">
+      <h3>今天怎麼選？</h3>
+      <div class="rules">
+        <div><strong>很累 / 睡不好 / 足底怪</strong><span>Recovery 或 Rest</span></div>
+        <div><strong>狀態普通</strong><span>Easy 或 Aerobic</span></div>
+        <div><strong>腿很新鮮</strong><span>Speed 或 LSD</span></div>
+        <div><strong>昨天強度高</strong><span>今天不要再硬</span></div>
+      </div>
+    </section>
+
+    <section class="section-head">
+      <h2>本週課表池</h2>
+      <p>每個類型都放：COROS 方向、我的建議、完成條件。選一個做就好。</p>
+    </section>
+
+    <section id="cards" class="cards"></section>
+
+    <section class="panel notes">
+      <h3>跑後筆記</h3>
+      <div class="note-grid">
+        <label>RPE 1–10 <input id="rpe" type="number" min="1" max="10" placeholder="例如 4"></label>
+        <label>小腿 1–5 <input id="calf" type="number" min="1" max="5" placeholder="1=OK"></label>
+        <label>足底 1–5 <input id="foot" type="number" min="1" max="5" placeholder="1=OK"></label>
+      </div>
+      <label class="checkbox"><input id="overpace" type="checkbox"> 今天有暴衝 / easy 跑太快</label>
+      <textarea id="note" placeholder="今天跑感、鞋子、心率、足底、小腿、配速控制..."></textarea>
+      <button id="saveNote">儲存本週筆記</button>
+      <p id="saveMsg" class="muted"></p>
+    </section>
+
+    <section class="panel footer-panel">
+      <h3>核心原則</h3>
+      <p>Easy days must stay easy. Control is strength. Marathon is restraint.</p>
+      <button id="resetBtn" class="danger">清除所有紀錄</button>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

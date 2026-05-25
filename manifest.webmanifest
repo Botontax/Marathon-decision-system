@@ -1,0 +1,9 @@
+{
+  "name": "Marathon Weekly Decision System",
+  "short_name": "Marathon",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f4f4f5",
+  "theme_color": "#111827",
+  "icons": []
+}
