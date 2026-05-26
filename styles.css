@@ -10,7 +10,6 @@
   --orange:#f97316;
   --red:#dc2626;
   --green:#16a34a;
-  --purple:#7c3aed;
 }
 *{box-sizing:border-box}
 html,body{margin:0}
@@ -34,11 +33,7 @@ body{
 }
 h1{font-size:30px;margin:0 0 8px}
 .subtitle{margin:0;color:#d1d5db;line-height:1.6}
-.wrap{
-  width:min(920px,100%);
-  margin:0 auto;
-  padding:18px;
-}
+.wrap{width:min(920px,100%);margin:0 auto;padding:18px}
 .panel,.training-card{
   background:var(--card);
   border:1px solid var(--line);
@@ -46,122 +41,51 @@ h1{font-size:30px;margin:0 0 8px}
   box-shadow:0 12px 28px rgba(15,23,42,.06);
 }
 .panel{padding:18px;margin-bottom:16px}
-.week-panel{
-  display:flex;
-  justify-content:space-between;
-  gap:16px;
-  align-items:flex-start;
+.week-panel{display:flex;justify-content:space-between;gap:16px;align-items:flex-start}
+.phase-pill{
+  display:inline-flex;margin:0 0 12px;padding:6px 10px;border-radius:999px;
+  background:#111827;color:white;font-weight:900;font-size:12px;
 }
-.label{
-  margin:0 0 6px;
-  color:var(--muted);
-  font-size:13px;
-  font-weight:700;
-}
+.label{margin:0 0 6px;color:var(--muted);font-size:13px;font-weight:700}
 #weekTitle{margin:0 0 6px;font-size:26px}
 .muted{color:var(--muted)}
 .goal{margin:10px 0 0;line-height:1.6}
 .week-buttons{display:flex;gap:8px;flex-wrap:wrap}
 button{
-  border:0;
-  border-radius:999px;
-  padding:10px 14px;
-  background:var(--black);
-  color:#fff;
-  font-weight:800;
-  cursor:pointer;
+  border:0;border-radius:999px;padding:10px 14px;background:var(--black);
+  color:#fff;font-weight:800;cursor:pointer;
 }
 button:active{transform:translateY(1px)}
 .danger{background:#991b1b}
 .rule-panel h3,.notes h3,.footer-panel h3{margin-top:0}
-.rules{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-  gap:10px;
-}
-.rules div{
-  background:#f9fafb;
-  border:1px solid var(--line);
-  border-radius:14px;
-  padding:12px;
-}
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
+.rules div{background:#f9fafb;border:1px solid var(--line);border-radius:14px;padding:12px}
 .rules strong{display:block;margin-bottom:6px}
 .rules span{color:var(--muted)}
 .section-head{padding:8px 4px 14px}
 .section-head h2{margin:0 0 6px}
 .section-head p{margin:0;color:var(--muted)}
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
-  gap:14px;
-  margin-bottom:16px;
-}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:14px;margin-bottom:16px}
 .training-card{padding:16px;overflow:hidden;position:relative}
-.training-card::before{
-  content:"";
-  position:absolute;
-  inset:0 0 auto 0;
-  height:5px;
-  background:var(--accent,var(--black));
-}
-.badge{
-  display:inline-flex;
-  padding:5px 10px;
-  border-radius:999px;
-  font-size:12px;
-  font-weight:900;
-  color:#fff;
-  background:var(--accent,var(--black));
-  margin-bottom:12px;
-}
+.training-card::before{content:"";position:absolute;inset:0 0 auto 0;height:5px;background:var(--accent,var(--black))}
+.badge{display:inline-flex;padding:5px 10px;border-radius:999px;font-size:12px;font-weight:900;color:#fff;background:var(--accent,var(--black));margin-bottom:12px}
 .training-card h3{margin:0 0 8px}
 .block{margin:12px 0}
-.block-title{
-  font-size:12px;
-  text-transform:uppercase;
-  letter-spacing:.08em;
-  color:var(--muted);
-  font-weight:900;
-  margin-bottom:4px;
-}
+.block-title{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:900;margin-bottom:4px}
 .block p{margin:0;line-height:1.55;color:#374151}
-.complete{
-  width:100%;
-  margin-top:12px;
-  background:#e5e7eb;
-  color:#111827;
-}
-.complete.done{
-  background:var(--green);
-  color:white;
-}
+.pace-box{background:#f9fafb;border:1px solid var(--line);border-radius:12px;padding:10px;font-weight:800}
+.complete{width:100%;margin-top:12px;background:#e5e7eb;color:#111827}
+.complete.done{background:var(--green);color:white}
 .recovery{--accent:var(--cyan)}
 .easy{--accent:var(--blue)}
 .aerobic{--accent:#0f766e}
 .speed{--accent:var(--orange)}
 .lsd{--accent:var(--red)}
 .rest{--accent:var(--green)}
-.note-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
-  gap:10px;
-  margin-bottom:12px;
-}
+.note-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-bottom:12px}
 label{font-weight:700;color:#374151}
-input,textarea{
-  width:100%;
-  margin-top:6px;
-  border:1px solid var(--line);
-  border-radius:12px;
-  padding:11px;
-  font:inherit;
-}
-.checkbox{
-  display:flex;
-  align-items:center;
-  gap:8px;
-  margin:8px 0 12px;
-}
+input,textarea{width:100%;margin-top:6px;border:1px solid var(--line);border-radius:12px;padding:11px;font:inherit}
+.checkbox{display:flex;align-items:center;gap:8px;margin:8px 0 12px}
 .checkbox input{width:auto;margin:0}
 textarea{min-height:120px;resize:vertical}
 .footer-panel p{line-height:1.6}
